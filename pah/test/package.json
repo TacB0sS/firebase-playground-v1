@@ -1,0 +1,23 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts ",
+    "build": "tsc",
+    "build:watch": "echo watch",
+    "dev": " npm run build && firebase emulators:start",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "test": "jest test/"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/test.js",
+  "private": true,
+  "devDependencies": {
+    "@types/mocha": "^10.0.1"
+  }
+}
